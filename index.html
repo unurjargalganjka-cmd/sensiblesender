@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <title>Sensible Sender</title>
+</head>
+<body>
+    <h1>Sensible Sender Онлайн Дэлгүүр</h1>
+    
+    <h2>Бараа сонгох</h2>
+    <select id="product">
+        <option value="Power Bank - 25000₮">Power Bank - 25,000₮</option>
+        <option value="Гар холигч - 30000₮">Гар холигч - 30,000₮</option>
+        <option value="LED гэрэл">LED гэрэл - Үнэ асуух</option>
+        <option value="Ханын тааг">Ханын тааг - Үнэ асуух</option>
+    </select>
+
+    <button onclick="sendDM()">Захиалах</button>
+
+    <script>
+        function sendDM() {
+            const product = document.getElementById("product").value;
+            const message = encodeURIComponent("Сайн байна уу! Би Sensible Sender-с " + product + " захиалж байна.");
+            window.open("https://www.instagram.com/direct/new/?text=" + message, "_blank");
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <title>Sensible Sender</title>
+</head>
+<body>
+    <h1>Sensible Sender Онлайн Дэлгүүр</h1>
+
+    <h2>Бараа сонгох</h2>
+    <label for="product">Бараа:</label>
+    <select id="product">
+        <option value="Power Bank - 25,000₮">Power Bank - 25,000₮</option>
+        <option value="Гар холигч - 30,000₮">Гар холигч - 30,000₮</option>
+        <option value="LED гэрэл - Үнэ асуух">LED гэрэл - Үнэ асуух</option>
+        <option value="Ханын тааг - Үнэ асуух">Ханын тааг - Үнэ асуух</option>
+    </select>
+
+    <br><br>
+
+    <label for="color">Өнгө/сонголт (хэрвээ байгаа бол):</label>
+    <select id="option">
+        <option value="Стандарт">Стандарт</option>
+        <option value="Цагаан">Цагаан</option>
+        <option value="Хар">Хар</option>
+    </select>
+
+    <br><br>
+    <button onclick="sendDM()">Захиалах</button>
+
+    <script>
+        function sendDM() {
+            const product = document.getElementById("product").value;
+            const option = document.getElementById("option").value;
+            const message = encodeURIComponent(
+                "Сайн байна уу! Би Sensible Sender-с " + product + " захиалж байна. Сонголт: " + option
+            );
+            window.open("https://www.instagram.com/direct/new/?text=" + message, "_blank");
+        }
+    </script>
+</body>
+</html>
